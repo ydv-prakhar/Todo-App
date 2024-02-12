@@ -18,18 +18,19 @@ app.get('/',(req,res)=>{
 });
 
 app.post("/", (req, res) => {
-    const inputTodoId = id;
-    const inputTodoTask = req.body.todoTask;
-    id++;
+    res.send(todos)
+    // const inputTodoId = id;
+    // const inputTodoTask = req.body.todoTask;
+    // id++;
  
-    todos.push({
-        todoId: inputTodoId.toString(),
-        todoTask: inputTodoTask
-    });
+    // todos.push({
+    //     todoId: inputTodoId.toString(),
+    //     todoTask: inputTodoTask
+    // });
  
-    res.render("index", {
-        data: todos,
-    });
+    // res.render("index", {
+    //     data: todos,
+    // });
 });
 
 app.post("/delete", (req, res) => {
